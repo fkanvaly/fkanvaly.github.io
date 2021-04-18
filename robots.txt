@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://fkanvaly.github.io/sitemap.xml
