@@ -12,7 +12,7 @@ function shuffle(a) {
 }
 
 
-let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toLowerCase()
 let emoji = [
     0x1F600, 0x1F601, 0x1F602, 0x1F603, 0x1F604, 0x1F605, 0x1F606, 0x1F607,
     0x1F608, 0x1F609, 0x1F610, 0x1F611, 0x1F612, 0x1F613, 0x1F614, 0x1F615,
@@ -21,8 +21,8 @@ let emoji = [
 
 emoji = shuffle(emoji);
 
-let dst = "JKLMNOPQRSTUVWXYZABCDEFGHI"
-let map = {}
+let dst = "JKLMNOPQRSTUVWXYZABCDEFGHI".toLowerCase()
+let map_char = {}
 let mape = {}
 
 let word2id = {" ": 26};
@@ -31,16 +31,18 @@ for (let i = 0; i < alphabet.length; i++) {
     word2id[alphabet[i]] = i;
     id2work[i] = alphabet[i];
     mape[alphabet[i]]= String.fromCodePoint(emoji[i]);
-    map[alphabet[i]]= dst[i];
+    map_char[alphabet[i]]= dst[i];
 }
 
+let order_fr = [ 4,  0,  8, 18, 19, 13, 20, 17, 11, 14,  3, 12,  2, 15, 21, 16,  5, 1,  6,  7,  9, 23, 24, 25, 22, 10]
+
 function encrypt() {
-    let txt = $('textarea#input').val()
+    let txt = $('textarea#input').val().toLowerCase()
 
     let encode = ""
     for (let i = 0; i < txt.length; i++) {
-        if (txt[i] in map){
-            encode += map[txt[i]];
+        if (txt[i] in map_char){
+            encode += map_char[txt[i]];
         }else{
             encode += txt[i];
         }
@@ -50,13 +52,16 @@ function encrypt() {
 }
 
 function encrypt_moji() {
-    let txt = $('textarea#input').val()
+    let txt = $('textarea#input').val().toLowerCase()
 
     let encode = ""
     for (let i = 0; i < txt.length; i++) {
-        if (txt[i] in map){
+        if (txt[i] in map_char){
             encode += mape[txt[i]];
-        }else{
+        }else if(txt[i] === " "){
+            encode += "  ";
+        }
+        else{
             encode += txt[i];
         }
     }
@@ -67,7 +72,8 @@ function encrypt_moji() {
 //-----------------------------------------------------------//
 
 let config = {
-    nb_it: 1000,
+    nb_it: 2000,
+    gamma: 4.0,
     param: {T:2000, alpha:0.98},
 }
 
@@ -79,9 +85,17 @@ let logdi = nj.zeros([27,27], 'float32')
 
 d3.csv("/blog/decryptage/bigrams.csv").then(function(data) {
     for (let i = 0; i < data.length; i++) {
-        let src = data[i].src;
-        let dst = data[i].dst;
+        let src = data[i].src.toLowerCase();
+        let dst = data[i].dst.toLowerCase();
         logdi.set(word2id[src], word2id[dst], data[i].val)
+    }
+});
+
+let dico = {}
+
+d3.csv("/blog/decryptage/dico.csv").then(function(data) {
+    for (let i = 0; i < data.length; i++) {
+        dico[data[i].word]=true;
     }
 });
 
@@ -96,8 +110,13 @@ function randint(max) {
     return Math.floor(Math.random() * max);
 }
 
+const dsu = (arr1, arr2) => arr1
+    .map((item, index) => [arr2[index], item]) // add the args to sort by
+    .sort(([arg1], [arg2]) => arg2 - arg1) // sort by the args
+    .map(([, item]) => item); // extract the sorted items
+
 function decode(sol) {
-    encrypt_moji()
+    // encrypt_moji()
     let text = encrypt();
     let res = ""
     for (let i = 0; i < text.length; i++) {
@@ -113,19 +132,34 @@ function decode(sol) {
 function init_random(conf) {
     encrypt_moji();
     let txt = encrypt();
-    let char = new Set(txt);
 
+    //init
     let sol = [];
     for (let i = 0; i < alphabet.length; i++) {
         sol.push(null)
     }
 
-    let k=0;
-    char.forEach(function(value) {
-        if(value !== " ") {
-            sol[k] = value;
-            k += 1;
+    //count char
+    let counts = {}
+    for (let i = 0; i < txt.length; i++) {
+        if(txt[i] in map_char) {
+            if (txt[i] in counts) {
+                counts[txt[i]] += 1
+            } else {
+                counts[txt[i]] = 1
+            }
         }
+    }
+    let char = Object.keys(counts)
+    let char_count = Object.values(counts)
+
+    let ordered_char = dsu(char, char_count)
+
+    //assign
+    let k=0;
+    ordered_char.forEach(function(value) {
+        sol[order_fr[k]] = value;
+        k += 1;
     });
 
     let map = {};
@@ -138,20 +172,48 @@ function init_random(conf) {
     return {'char':sol, 'map':map};
 }
 
-function score(conf, sol) {
+function likelihood(conf, sol) {
     let res = decode(sol);
     let val = 0;
     for (let i = 0; i < res.length-1; i++) {
-        let u = word2id[res[i]];
-        let v = word2id[res[i+1]];
-        val += logdi.get(u,v)
+        let char1 =  res[i];
+        let char2 =  res[i+1];
+        if (char1 in word2id && char2 in word2id) {
+            let u = word2id[char1];
+            let v = word2id[char2];
+            val += logdi.get(u, v)
+        }
     }
     return val/res.length;
 }
 
+function word_score(conf, sol) {
+    let res = decode(sol);
+    let words = res.split(' ')
+    let val = 0;
+    for (let i = 0; i < words.length; i++) {
+        if(words[i] in dico){
+            val+=1;
+        }
+    }
+    console.log("word: "+val)
+
+    return val/words.length;
+}
+
+function score(conf, sol) {
+    if (sol['phase']===0){
+        console.log(likelihood(sol))
+        return likelihood(sol)
+    }else {
+        console.log("helllllloooo")
+        return word_score(sol) * conf.gamma + likelihood(sol)
+    }
+}
+
 function neighbor(conf, sol) {
-    let i = randint(27);
-    let j = randint(27);
+    let i = randint(26);
+    let j = randint(26);
 
     //copy
     let new_sol = [];
@@ -220,27 +282,39 @@ function recuit(func, init, neighb, pen, again, init_t, decrese_t){
         "func": func,
         sol_i: start,
         val_i: func.score(start),
-        "i": 1,
+        "i": 0,
         "T": init_t(),
-        "iter": function () {
-            if (again(this.i, this.val_i, this.sol_i)) {
+        "iter": function (phase=0) {
+            let progress = again(this.i, this.val_i, this.sol_i)
+            if (progress) {
                 let sol = pen(neighb(this.sol_i));
                 let val = this.func.score(sol);
 
-                if (val > this.val_i || (this.T > 0 && rand(0,1) < Math.exp((val - this.val_i) / this.T))){
+                let p = null;
+                if(phase===0) {
+                    let ALPHA = 1;
+                    let size = $('textarea#input').val().toLowerCase().length
+                    p = Math.exp(ALPHA * (val - this.val_i) * size)
+                }else if(phase===1){
+                    p = Math.exp((val - this.val_i) / this.T)
+                }
+                if (val > this.val_i || (this.T > 0 && rand(0,1) < p)){
                     this.val_i = val
                     this.sol_i = sol
                 }
+
                 this.i += 1;
-                this.T = decrese_t(this.T);
+                if(phase===1) {
+                    this.T = decrese_t(this.T);
+                }
             }
-            return {"i":this.i ,"sol": this.func.best_sol, "val": this.func.best_val}
+            return {"progress":progress, "i":this.i ,"sol": this.func.best_sol, "val": this.func.best_val}
         }
     }
 }
 
 function build(conf) {
-    let objective = obj_wrapper(score.bind(null, conf))
+    let objective = obj_wrapper(likelihood.bind(null, conf))
     let init = init_random.bind(null, conf);
     let neighb_fn = neighbor.bind(null, conf);
     let again = max_iter.bind(null, conf);
@@ -258,7 +332,7 @@ function build(conf) {
 
 
 function run(iterator, run_id=0) {
-    let result = iterator();
+    let result = iterator(0.0);
     $("textarea#decrypt_msg").val(decode(result.sol));
 
     return {"run_id": run_id, "iteration": result.i, "score": result.val, "goal":0}
@@ -337,15 +411,15 @@ function setup() {
 
 function draw() {
     if(begin) {
-        if (t - t0 > 0.5) {
+        // if (t - t0 > 0.5) {
             if (ALGO!==null){
                 let log = run(ALGO, RUN_ID);
                 DATA.push(log);
             }
             vega_plot(DATA, config);
             t0=t;
-        }
-        t+=0.1;
+        // }
+        // t+=0.1;
     }
 
 }
