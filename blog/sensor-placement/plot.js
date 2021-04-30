@@ -343,6 +343,7 @@ two.bind('update', function(t) {
                 DATA.push(log);
             }
             vega_plot(DATA, config);
+            t0=t;
         }
     }
 }).play();
