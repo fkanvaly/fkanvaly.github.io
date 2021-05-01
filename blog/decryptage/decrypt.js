@@ -12,7 +12,7 @@ function shuffle(a) {
 }
 
 
-let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toLowerCase()
+let alphabet = "abcdefghijklmnopqrstuvwxyz"
 let emoji = [
     0x1F600, 0x1F601, 0x1F602, 0x1F603, 0x1F604, 0x1F605, 0x1F606, 0x1F607,
     0x1F608, 0x1F609, 0x1F610, 0x1F611, 0x1F612, 0x1F613, 0x1F614, 0x1F615,
@@ -21,18 +21,25 @@ let emoji = [
 
 emoji = shuffle(emoji);
 
-let dst = "JKLMNOPQRSTUVWXYZABCDEFGHI".toLowerCase()
+let dst = "jklmnopqrstuvwxyzabcdefghi"
 let map_char = {}
 let mape = {}
 
 let word2id = {" ": 26};
 let id2work = {26: " "};
+
+let str_map = ""
 for (let i = 0; i < alphabet.length; i++) {
     word2id[alphabet[i]] = i;
     id2work[i] = alphabet[i];
+
     mape[alphabet[i]]= String.fromCodePoint(emoji[i]);
+    str_map += alphabet[i] + "$\\rightarrow$" + mape[alphabet[i]] + " $\\mid$ "
+
     map_char[alphabet[i]]= dst[i];
 }
+
+$("#map").text(str_map);
 
 let order_fr = [ 4,  0,  8, 18, 19, 13, 20, 17, 11, 14,  3, 12,  2, 15, 21, 16,  5, 1,  6,  7,  9, 23, 24, 25, 22, 10]
 
