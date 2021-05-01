@@ -72,9 +72,9 @@ function encrypt_moji() {
 //-----------------------------------------------------------//
 
 let config = {
-    nb_it: 2000,
+    nb_it: 5000,
     gamma: 4.0,
-    param: {T:2000, alpha:0.98},
+    param: {T:0.05, alpha:0.99},
 }
 
 let DATA = [];
@@ -172,7 +172,7 @@ function init_random(conf) {
     return {'char':sol, 'map':map};
 }
 
-function likelihood(conf, sol) {
+function likelihood(sol) {
     let res = decode(sol);
     let val = 0;
     for (let i = 0; i < res.length-1; i++) {
@@ -187,7 +187,7 @@ function likelihood(conf, sol) {
     return val/res.length;
 }
 
-function word_score(conf, sol) {
+function word_score(sol) {
     let res = decode(sol);
     let words = res.split(' ')
     let val = 0;
@@ -196,19 +196,12 @@ function word_score(conf, sol) {
             val+=1;
         }
     }
-    console.log("word: "+val)
-
+    // console.log(val)
     return val/words.length;
 }
 
-function score(conf, sol) {
-    if (sol['phase']===0){
-        console.log(likelihood(sol))
-        return likelihood(sol)
-    }else {
-        console.log("helllllloooo")
-        return word_score(sol) * conf.gamma + likelihood(sol)
-    }
+function combine(sol) {
+    return word_score(sol) * config.gamma + likelihood(sol)
 }
 
 function neighbor(conf, sol) {
@@ -242,13 +235,12 @@ function max_iter(conf, i, val, sol) {
     return i < conf.nb_it;
 }
 
-function obj_wrapper(func) {
+function obj_wrapper() {
     return {
         best_val: null,
         best_sol: null,
-        foo: func,
-        score:  function (sol) {
-            let val = this.foo(sol)
+        score:  function (foo, sol) {
+            let val = foo(sol)
             if (this.best_val === null){
                 this.best_val = val;
                 this.best_sol = sol;
@@ -276,45 +268,58 @@ function decrease_temp(conf, T) {
     return conf.param.alpha*T;
 }
 
-function recuit(func, init, neighb, pen, again, init_t, decrese_t){
+function recuit(track, init, neighb, pen, again, init_t, decrese_t){
     let start = init()
     return {
-        "func": func,
+        "func": track,
         sol_i: start,
-        val_i: func.score(start),
+        val_i: track.score(likelihood, start),
+        "phase": 0,
         "i": 0,
         "T": init_t(),
         "iter": function (phase=0) {
             let progress = again(this.i, this.val_i, this.sol_i)
             if (progress) {
                 let sol = pen(neighb(this.sol_i));
-                let val = this.func.score(sol);
+                let val = null;
 
                 let p = null;
-                if(phase===0) {
+                if(this.phase===0) {
+                    val = this.func.score(likelihood, sol);
                     let ALPHA = 1;
                     let size = $('textarea#input').val().toLowerCase().length
                     p = Math.exp(ALPHA * (val - this.val_i) * size)
-                }else if(phase===1){
+
+                }else if(this.phase===1){
+                    val = this.func.score(combine, sol);
                     p = Math.exp((val - this.val_i) / this.T)
                 }
+
                 if (val > this.val_i || (this.T > 0 && rand(0,1) < p)){
                     this.val_i = val
                     this.sol_i = sol
                 }
 
                 this.i += 1;
-                if(phase===1) {
+                if(this.phase===1) {
                     this.T = decrese_t(this.T);
                 }
+
+                if(this.phase===0) {
+                    if (!again(this.i, this.val_i, this.sol_i)) {
+                        config.nb_it += config.nb_it/2
+                        this.phase = 1;
+                    }
+                }
             }
+
             return {"progress":progress, "i":this.i ,"sol": this.func.best_sol, "val": this.func.best_val}
         }
     }
 }
 
 function build(conf) {
-    let objective = obj_wrapper(likelihood.bind(null, conf))
+    let tracker = obj_wrapper()
     let init = init_random.bind(null, conf);
     let neighb_fn = neighbor.bind(null, conf);
     let again = max_iter.bind(null, conf);
@@ -323,7 +328,7 @@ function build(conf) {
     let init_t = init_temp.bind(null, conf);
     let decrease_t = decrease_temp.bind(null, conf);
 
-    let algo = recuit(objective, init, neighb_fn, pen, again, init_t, decrease_t);
+    let algo = recuit(tracker, init, neighb_fn, pen, again, init_t, decrease_t);
     let unbound_iterator = algo.iter;
     let iterator = unbound_iterator.bind(algo);
 
@@ -332,19 +337,18 @@ function build(conf) {
 
 
 function run(iterator, run_id=0) {
-    let result = iterator(0.0);
+    let result = iterator();
     $("textarea#decrypt_msg").val(decode(result.sol));
 
     return {"run_id": run_id, "iteration": result.i, "score": result.val, "goal":0}
 }
 
 function start() {
-    ALGO = build(config);
-
     if(RUN_ID===null){
+        ALGO = build(config);
         RUN_ID=0
     }else {
-        RUN_ID += 1
+        RUN_ID = 1
     }
 
     begin=true;

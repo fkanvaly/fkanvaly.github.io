@@ -23,13 +23,28 @@ var P_COLOR = ['#3498db', '#e67e22', '#1abc9c', '#9b59b6', '#34495e', '#2ecc71',
 let pop_size = 250;
 
 
-function getRandomArbitrary(min, max) {
+function rand(min, max) {
     return Math.random() * (max - min) + min;
+}
+
+function randint(max) {
+    return Math.floor(Math.random() * max);
 }
 
 function choose(choices) {
     var index = Math.floor(Math.random() * choices.length);
     return choices[index];
+}
+
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
+    while (i-- > min) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(min);
 }
 
 // two has convenience methods to create shapes.
@@ -44,8 +59,8 @@ var createParticle = function (x,y, id) {
     return {
         particle: particle,
         v: {
-            x: mean*v_x_sign + std*getRandomArbitrary(-1, 1),
-            y: mean*v_y_sign + std*getRandomArbitrary(-1, 1)
+            x: mean*v_x_sign + std*rand(-1, 1),
+            y: mean*v_y_sign + std*rand(-1, 1)
         },
         k: 0,
         id:id
@@ -76,7 +91,9 @@ var collision = function (p) {
 }
 
 let particles = [];
+let part_capt = [];
 for (let i=0; i<pop_size; i++){
+    part_capt.push(0)
     particles.push(createParticle(
         two.width*Math.random(),
         two.height*Math.random(),
@@ -86,10 +103,11 @@ for (let i=0; i<pop_size; i++){
 
 let captured_counts = 0;
 var capture = function (){
-    cage.position.x = getRandomArbitrary(cage.width/2, two.width-cage.width/2);
-    cage.position.y = getRandomArbitrary(cage.height/2, two.height-cage.height/2);
+    cage.position.x = rand(cage.width/2, two.width-cage.width/2);
+    cage.position.y = rand(cage.height/2, two.height-cage.height/2);
 
     let newly_captured = 0;
+
     particles.forEach(function (p) {
         if ( Math.abs(p.particle.position.x-cage.position.x) < cage.width/2
             && Math.abs(p.particle.position.y-cage.position.y) < cage.height/2 ) {
@@ -103,6 +121,7 @@ var capture = function (){
             p.particle.stroke = P_COLOR[p.k];
         }
     })
+
     update_belief(newly_captured, captured_counts);
     plot()
 }
