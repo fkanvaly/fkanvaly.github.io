@@ -5,6 +5,8 @@ let plot = () => {
         "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
         "data": {"url": "/blog/decryptage/bigrams.csv"},
         "title": "Bigram log-likelihood",
+        "height":300,
+        "width":300,
         "encoding": {
             "y": {"field": "src", "type": "ordinal", "sort":"descending"},
             "x": {"field": "dst", "type": "ordinal"}
@@ -22,16 +24,6 @@ let plot = () => {
                     }
                 }
             },
-            {
-                "mark": {"type": "text", "fontSize": 6},
-                "encoding": {
-                    "text": {"field": "val", "type": "quantitative", "format": ".2f"},
-                    "color": {
-                        "condition": {"test": "datum['val'] > -6", "value": "black"},
-                        "value": "white"
-                    }
-                }
-            }
         ],
         "config": {
             "axis": {"grid": true, "tickBand": "extent"}
