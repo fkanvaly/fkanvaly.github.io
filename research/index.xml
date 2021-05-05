@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Researches on Kanva</title>
+    <link>https://kanvaly.io/research/</link>
+    <description>Recent content in Researches on Kanva</description>
+    <image>
+      <url>https://kanvaly.io/cover.webp</url>
+      <link>https://kanvaly.io/cover.webp</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Papers Review</title>
+      <link>https://kanvaly.io/research/papers/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kanvaly.io/research/papers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Podcast Review</title>
+      <link>https://kanvaly.io/research/podcast/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kanvaly.io/research/podcast/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
