@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>machine learning on kanvaly.🤖</title>
-    <link>https://kanvaly.io/tags/machine-learning/</link>
-    <description>Recent content in machine learning on kanvaly.🤖</description>
+    <title>Papers Short Review on kanvaly.🤖</title>
+    <link>https://kanvaly.io/research/papers/</link>
+    <description>Recent content in Papers Short Review on kanvaly.🤖</description>
     <image>
       <url>https://kanvaly.io/cover.webp</url>
       <link>https://kanvaly.io/cover.webp</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mark and Recapture 🦒</title>
-      <link>https://kanvaly.io/posts/capture-recapture/</link>
-      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://kanvaly.io/posts/capture-recapture/</guid>
-      <description>Bayesian Belief Update</description>
-    </item>
-    
-    <item>
-      <title>Normalized Compression Distance</title>
-      <link>https://kanvaly.io/posts/protein/</link>
-      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://kanvaly.io/posts/protein/</guid>
-      <description>You won&amp;#39;t believe it  ! Protein classification as simple as zipping file</description>
-    </item>
-    
+    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/research/papers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VoxelMorph: A Learning Framework for Deformable Medical Image Registration</title>
       <link>https://kanvaly.io/research/papers/to_do_or_not_to_do/</link>

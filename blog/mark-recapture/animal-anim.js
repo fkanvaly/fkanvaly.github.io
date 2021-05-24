@@ -3,14 +3,35 @@
 //#################################################################
 // Make an instance of two and place it on the page.
 var elem = document.getElementById('draw');
-var params = { width: 300, height: 300 };
+var params = { width: 600, height: 300 };
 var two = new Two(params).appendTo(elem);
 
+var radius = two.height/2-10;
+var mar = 5
+
+var center = {left:{x:radius+mar, y:mar+radius},
+                right:{x:two.width-radius-mar, y:mar+radius},}
+
+var left_bord = two.makeCircle(center.left.x, center.left.y, radius);
+left_bord.linewidth = 4
+left_bord.stroke = '#ecf0f1'
+
+var right_bord = two.makeCircle(center.right.x, center.left.y, radius);
+right_bord.linewidth = 4
+right_bord.stroke = '#ecf0f1'
+
 // Border
-var border = two.makeRectangle(0, 0, two.width, two.height);
-border.translation.set(two.width/2, two.height/2)
+var border = two.makeRectangle(two.width/2, radius, two.width-two.height, two.height);
 border.linewidth = 4
-border.stroke = '#ecf0f1'
+border.stroke = '#ffffff'
+
+var up = two.makeLine(radius, mar, two.width-radius, mar);
+up.linewidth = 4
+up.stroke = '#ecf0f1'
+
+var down = two.makeLine(radius, 2*radius+mar, two.width-radius, 2*radius+mar);
+down.linewidth = 4
+down.stroke = '#ecf0f1'
 
 // Cage
 var cage = two.makeRectangle(0, 0, two.width/2, two.height/2);
@@ -36,17 +57,6 @@ function choose(choices) {
     return choices[index];
 }
 
-function getRandomSubarray(arr, size) {
-    var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
-    while (i-- > min) {
-        index = Math.floor((i + 1) * Math.random());
-        temp = shuffled[index];
-        shuffled[index] = shuffled[i];
-        shuffled[i] = temp;
-    }
-    return shuffled.slice(min);
-}
-
 // two has convenience methods to create shapes.
 var createParticle = function (x,y, id) {
     let particle = two.makeCircle(x, y, 2);
@@ -69,23 +79,31 @@ var createParticle = function (x,y, id) {
 
 var collision = function (p) {
     // bottom
-    if(p.particle.position.y + p.particle.radius > two.height){
-        p.particle.position.y = two.height - p.particle.radius;
+    if(p.particle.position.y + p.particle.radius > mar+radius*2){
+        p.particle.position.y = mar+radius*2 - p.particle.radius;
         p.v.y = -p.v.y;
     }
     // top
-    if(p.particle.position.y - p.particle.radius< 0){
-        p.particle.position.y = p.particle.radius;
+    if(p.particle.position.y - p.particle.radius< mar){
+        p.particle.position.y = mar+p.particle.radius;
         p.v.y = -p.v.y;
     }
     //left
-    if(p.particle.position.x - p.particle.radius < 0){
-        p.particle.position.x = p.particle.radius;
-        p.v.x = -p.v.x;
+    if(p.particle.position.x - p.particle.radius < mar+radius){
+
+        //distance to center
+        let dist = Math.sqrt(
+            Math.pow(p.particle.position.x-center.left.x, 2)+
+            Math.pow(p.particle.position.y-center.left.y, 2)
+        )
+        if(dist>radius){
+            p.particle.position.x = mar+radius+p.particle.radius;
+            p.v.x = -p.v.x;
+        }
     }
     //right
-    if(p.particle.position.x + p.particle.radius > two.width){
-        p.particle.position.x = two.width - p.particle.radius;
+    if(p.particle.position.x + p.particle.radius > two.width-radius-mar){
+        p.particle.position.x = two.width-radius-mar - p.particle.radius;
         p.v.x = -p.v.x;
     }
 }

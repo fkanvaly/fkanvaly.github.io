@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kanva</title>
+    <title>kanvaly.🤖</title>
     <link>https://kanvaly.io/</link>
-    <description>Recent content on Kanva</description>
+    <description>Recent content on kanvaly.🤖</description>
     <image>
       <url>https://kanvaly.io/cover.webp</url>
       <link>https://kanvaly.io/cover.webp</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 07 Apr 2021 22:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Papers Review</title>
-      <link>https://kanvaly.io/research/papers/</link>
-      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://kanvaly.io/research/papers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Podcast Review</title>
-      <link>https://kanvaly.io/research/podcast/</link>
-      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://kanvaly.io/research/podcast/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Decipher messages 🔐</title>
       <link>https://kanvaly.io/posts/decryptage/</link>
@@ -158,15 +140,6 @@ You can debug your script as you wish; often a print is enough but in more compl
     </item>
     
     <item>
-      <title>Deep Learning, Ian Goodfellow et al. 2016</title>
-      <link>https://kanvaly.io/research/books/deep-learning-ian-goodfellow/</link>
-      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://kanvaly.io/research/books/deep-learning-ian-goodfellow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Normalized Compression Distance</title>
       <link>https://kanvaly.io/posts/protein/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
@@ -176,12 +149,13 @@ You can debug your script as you wish; often a print is enough but in more compl
     </item>
     
     <item>
-      <title>Pattern Recognition and Machine Learning</title>
-      <link>https://kanvaly.io/research/books/pattern-recognition-and-machine-learning/</link>
+      <title>VoxelMorph: A Learning Framework for Deformable Medical Image Registration</title>
+      <link>https://kanvaly.io/research/papers/to_do_or_not_to_do/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/research/books/pattern-recognition-and-machine-learning/</guid>
-      <description></description>
+      <guid>https://kanvaly.io/research/papers/to_do_or_not_to_do/</guid>
+      <description>📝 Paper: https://arxiv.org/pdf/1809.05231.pdf
+🎯 What? Pairwise medical image registration. Image registration, also known as image fusion or image matching, is the process of aligning two or more images based on image appearances. Medical Image Registration seeks to find an optimal spatial transformation that best aligns the underlying anatomical structures. in other words, is the process of finding is the process of finding optimal transformation that puts different images optimal transformation that puts different images into spatial correspondence.</description>
     </item>
     
     
@@ -193,6 +167,15 @@ You can debug your script as you wish; often a print is enough but in more compl
       <guid>https://kanvaly.io/connector/</guid>
       <description>This page is dedicated to resources and blogs that I find interesting.
 Blog  Vincent D. Warmerdam - koaning Andrej Karpathy (Sr. Director of AI at Tesla) calmcode  AI  Twitter AI tweets Machine Learning subreddit  Design  Dribbble  </description>
+    </item>
+    
+    <item>
+      <title>Connector</title>
+      <link>https://kanvaly.io/publication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kanvaly.io/publication/</guid>
+      <description>2021  K. Fadiga, E. Houzé, A. Diaconescu, and J.-L Dessalles, To do or not to do: Finding causal relations in smart homes. - Under Review at IEEE International Conference on Autonomic Computing and Self-Organizing Systems - ACSOS 2021. 🔗: https://arxiv.org/pdf/2105.10058.pdf  </description>
     </item>
     
     <item>
