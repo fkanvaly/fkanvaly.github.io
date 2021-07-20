@@ -1230,7 +1230,7 @@ SOFTWARE.
               var hasDoubleDecimals = false;
 
               // Handle double decimal values e.g: 48.6037.71.8
-              // Like: https://m.abcsofchinese.com/images/svg/亼ji2.svg
+              // Like: https://m.abcsofchinese.com/image/svg/亼ji2.svg
               for (j = 0; j < items.length; j++) {
 
                 number = items[j];
