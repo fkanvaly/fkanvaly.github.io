@@ -34,7 +34,7 @@
       <pubDate>Thu, 30 Apr 2020 22:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/alpha-quoridor/</guid>
-      <description>We build an agent that master Quoridor Board Game. Quoridor is not so famous game and there is not a lot of research about it. It has a state-space complexity similar to Chess with a higher game-tree complexity. We code this game like AlphaGo Zero from Deepmind, which learns to play the game by self playing without human games data.</description>
+      <description>We build an agent that masters Quoridor Board Game. Quoridor is not so famous game and there is not a lot of research about it. It has a state-space complexity similar to Chess with a higher game-tree complexity. We code this game like AlphaGo Zero from Deepmind, which learns to play the game by self-playing without human games data.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@
       <pubDate>Wed, 07 Apr 2021 22:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/credit-default-prediction/</guid>
-      <description>In this work , we were trying to predict credit default risk. We were dealing with historical credit clients informations and willing to predict whether or not a client will reimbursed his credit . This is a standard supervised classification task . First of all , we analyze and clean the data . Then , extract relevelant pattern. Then train models and optimize the most promising . Finally, we use stacking to build a strong predictor.</description>
+      <description>In this work, we were trying to predict credit default risk. We were dealing with historical credit clients&#39; information and were willing to predict whether or not a client will reimburse his credit. This is a standard supervised classification task. First of all, we analyze and clean the data. Then, extract the relevant pattern. Then train models and optimize the most promising. Finally, we use stacking to build a strong predictor.</description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@
       <pubDate>Wed, 01 Jan 2020 23:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/link-prediction/</guid>
-      <description>Our task was on predicting links between pages in a subgraph of the French webgraph. The webgraph is a directed graph G(V, E) whose vertices correspond to the pages of the French web. A directed edge connects page U to page V if there exists a hyperlink on page ​ U pointing to page ​ V . From the original subgraph, edges have been deleted at random​ . Given a set of candidate edges, our job was to predict which ones appeared in the original subgraph.</description>
+      <description>Our task was on predicting links between pages in a subgraph of the French web graph. The web graph is a directed graph G(V, E) whose vertices correspond to the pages of the French web. A directed edge connects page U to page V if there exists a hyperlink on page ​ U pointing to page ​ V . From the original subgraph, edges have been deleted at random​ . Given a set of candidate edges, our job was to predict which ones appeared in the original subgraph.</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@
       <pubDate>Sun, 31 May 2020 22:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/position-based-dynamics/</guid>
-      <description>One approaches for the simulation of dynamic systems in computer graphics are force based. Internal and external forces are accumulated from which accelerations are computed based on Newton’s second law of motion. A time integration method is then used to update the velocities and finally the positions of the object. A few simulation methods (most rigid body simulators) use impulse based dynamics and directly manipulate velocities. The paper I studyed present an approach which omits the velocity layer as well and immediately works on the positions.</description>
+      <description>One approach for the simulation of dynamic systems in computer graphics is force-based. Internal and external forces are accumulated from which accelerations are computed based on Newton’s second law of motion. A time integration method is then used to update the velocities and finally the positions of the object. A few simulation methods (most rigid body simulators) use impulse-based dynamics and directly manipulate velocities. The paper I studied present an approach that omits the velocity layer as well and immediately works on the positions.</description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@
       <pubDate>Tue, 31 Dec 2019 23:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/object-tracking/</guid>
-      <description>Our goal was to firstly build a multiple object tracker by different methods of detection and tracking. Then choose an application domain. We chose to work on surveillance and security. The user can segment region of interest in a video scene and any new object motion, position and time spend there. Then after a certain amount of time, we start identification (if it is a human or a car) in an asynchronous way and launch alarm given the result of identification.</description>
+      <description>Our goal was to firstly build a multiple object tracker by different methods of detection and tracking. Then choose an application domain. We chose to work on surveillance and security. The user can segment the region of interest in a video scene and any new object motion, position, and time spend there. Then after a certain amount of time, we start identification (if it is a human or a car) in an asynchronous way and launch an alarm given the result of identification.</description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@
       <pubDate>Sat, 30 Nov 2019 23:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/sketch-based-shape-retrieval/</guid>
-      <description>I choose to work on the problem of sketch-based retrieval for this semester, where the goal is to find relevant 3D models in a large collection. The input is a rough 2D sketch, rather than a complete 3D model. This problem is challenging and will alows me to use very well-developed techniques from image analysis. My goal will be to read and implement a recent paper, Sketch-Based Shape Retrieval, and test it on any dataset, such as the one described here.</description>
+      <description>I choose to work on the problem of sketch-based retrieval for this semester, where the goal is to find relevant 3D models in a large collection. The input is a rough 2D sketch, rather than a complete 3D model. This problem is challenging and will allow me to use very well-developed techniques from image analysis. My goal will be to read and implement a recent paper, Sketch-Based Shape Retrieval, and test it on any dataset, such as the one described here.</description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@
       <pubDate>Fri, 31 May 2019 22:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/intership-rgb-to-infrared-translation-using-gan/</guid>
-      <description>For tasks such as face recognition, facial landmarks detection or gaze estimation state-of-the-art is often achieved using deep neural networks. One major drawback of this technology is that it requires a huge amount of training data. Fortunately, there are huge datasets publicly available for RGB image so when your application is based on RGB image there is no difficulty in gathering data. However, for the application of those networks on infrared (IR) imagery there are often not enough annotated data available (if not none).</description>
+      <description>For tasks such as face recognition, facial landmarks detection, or gaze estimation state-of-the-art is often achieved using deep neural networks. One major drawback of this technology is that it requires a huge amount of training data. Fortunately, there are huge datasets publicly available for RGB images so when your application is based on RGB images there is no difficulty in gathering data. However, for the application of those networks on infrared (IR) imagery, there are often not enough annotated data available (if not none).</description>
     </item>
     
     <item>
@@ -107,7 +107,7 @@
       
       <guid>https://kanvaly.io/projects/flying-fish/</guid>
       <description>Our project is part of an initiative jointly initiated by ENSTA Bretagne and EDF concerning the dam on Lake Guerlédan, which aims to check the state of the evacuation grids set up by EDF to evacuate water from the cooling circuits of nuclear power plants into the nearby river.
-The drone we want to design and build will have to be able not only to fly, but also to immerse itself in order to evolve in an aquatic environment, in order to access dangerous areas for divers.</description>
+The drone we want to design and build will have to be able not only to fly but also to immerse itself to evolve in an aquatic environment, to access dangerous areas for divers.</description>
     </item>
     
     <item>
@@ -136,7 +136,7 @@ You can debug your script as you wish; often a print is enough but in more compl
       <pubDate>Mon, 31 Dec 2018 23:00:00 +0000</pubDate>
       
       <guid>https://kanvaly.io/projects/smart-home-control/</guid>
-      <description>As part of the mini-project of my Modal IoT I decided to transform my room into a smart one. This way, I will be able to control the state of the light, open my door or generate LED animations with my voice, my phone or by voice command. So I made different objects that allowed me to make this possible.</description>
+      <description>As part of the mini-project of my Modal IoT I decided to transform my room into a smart one. This way, I will be able to control the state of the light, open my door or generate LED animations with my voice, my phone, or by voice command. So I made different objects that allowed me to make this possible.</description>
     </item>
     
     <item>
