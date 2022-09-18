@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computer graphics on kanvaly.🤖</title>
-    <link>https://kanvaly.io/categories/computer-graphics/</link>
+    <link>https://fkanvaly.github.io/categories/computer-graphics/</link>
     <description>Recent content in Computer graphics on kanvaly.🤖</description>
     <image>
-      <url>https://kanvaly.io/cover.webp</url>
-      <link>https://kanvaly.io/cover.webp</link>
+      <url>https://fkanvaly.github.io/cover.webp</url>
+      <link>https://fkanvaly.github.io/cover.webp</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 30 Nov 2019 23:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/categories/computer-graphics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Nov 2019 23:00:00 +0000</lastBuildDate><atom:link href="https://fkanvaly.github.io/categories/computer-graphics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sketch-based shape retrieval</title>
-      <link>https://kanvaly.io/projects/sketch-based-shape-retrieval/</link>
+      <link>https://fkanvaly.github.io/projects/sketch-based-shape-retrieval/</link>
       <pubDate>Sat, 30 Nov 2019 23:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/sketch-based-shape-retrieval/</guid>
+      <guid>https://fkanvaly.github.io/projects/sketch-based-shape-retrieval/</guid>
       <description>I choose to work on the problem of sketch-based retrieval for this semester, where the goal is to find relevant 3D models in a large collection. The input is a rough 2D sketch, rather than a complete 3D model. This problem is challenging and will allow me to use very well-developed techniques from image analysis. My goal will be to read and implement a recent paper, Sketch-Based Shape Retrieval, and test it on any dataset, such as the one described here.</description>
     </item>
     

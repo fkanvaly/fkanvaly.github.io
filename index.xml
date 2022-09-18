@@ -2,120 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kanvaly.🤖</title>
-    <link>https://kanvaly.io/</link>
+    <link>https://fkanvaly.github.io/</link>
     <description>Recent content on kanvaly.🤖</description>
     <image>
-      <url>https://kanvaly.io/cover.webp</url>
-      <link>https://kanvaly.io/cover.webp</link>
+      <url>https://fkanvaly.github.io/cover.webp</url>
+      <link>https://fkanvaly.github.io/cover.webp</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 07 Apr 2021 22:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Apr 2021 22:00:00 +0000</lastBuildDate><atom:link href="https://fkanvaly.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decipher messages 🔐</title>
-      <link>https://kanvaly.io/posts/decryptage/</link>
+      <link>https://fkanvaly.github.io/posts/decryptage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/decryptage/</guid>
+      <guid>https://fkanvaly.github.io/posts/decryptage/</guid>
       <description>how to decrypt any secret code</description>
     </item>
     
     <item>
       <title>Sensor placement 🎛️</title>
-      <link>https://kanvaly.io/posts/sensor-placement/</link>
+      <link>https://fkanvaly.github.io/posts/sensor-placement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/sensor-placement/</guid>
+      <guid>https://fkanvaly.github.io/posts/sensor-placement/</guid>
       <description>Stochastic Optimization</description>
     </item>
     
     <item>
       <title>Alpha-Quoridor 🕹️</title>
-      <link>https://kanvaly.io/projects/alpha-quoridor/</link>
+      <link>https://fkanvaly.github.io/projects/alpha-quoridor/</link>
       <pubDate>Thu, 30 Apr 2020 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/alpha-quoridor/</guid>
+      <guid>https://fkanvaly.github.io/projects/alpha-quoridor/</guid>
       <description>We build an agent that masters Quoridor Board Game. Quoridor is not so famous game and there is not a lot of research about it. It has a state-space complexity similar to Chess with a higher game-tree complexity. We code this game like AlphaGo Zero from Deepmind, which learns to play the game by self-playing without human games data.</description>
     </item>
     
     <item>
       <title>Credit default prediction 💰 </title>
-      <link>https://kanvaly.io/projects/credit-default-prediction/</link>
+      <link>https://fkanvaly.github.io/projects/credit-default-prediction/</link>
       <pubDate>Wed, 07 Apr 2021 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/credit-default-prediction/</guid>
-      <description>In this work, we were trying to predict credit default risk. We were dealing with historical credit clients&#39; information and were willing to predict whether or not a client will reimburse his credit. This is a standard supervised classification task. First of all, we analyze and clean the data. Then, extract the relevant pattern. Then train models and optimize the most promising. Finally, we use stacking to build a strong predictor.</description>
+      <guid>https://fkanvaly.github.io/projects/credit-default-prediction/</guid>
+      <description>In this work, we were trying to predict credit default risk. We were dealing with historical credit clients&amp;rsquo; information and were willing to predict whether or not a client will reimburse his credit. This is a standard supervised classification task. First of all, we analyze and clean the data. Then, extract the relevant pattern. Then train models and optimize the most promising. Finally, we use stacking to build a strong predictor.</description>
     </item>
     
     <item>
       <title>Link prediction 🔗</title>
-      <link>https://kanvaly.io/projects/link-prediction/</link>
+      <link>https://fkanvaly.github.io/projects/link-prediction/</link>
       <pubDate>Wed, 01 Jan 2020 23:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/link-prediction/</guid>
+      <guid>https://fkanvaly.github.io/projects/link-prediction/</guid>
       <description>Our task was on predicting links between pages in a subgraph of the French web graph. The web graph is a directed graph G(V, E) whose vertices correspond to the pages of the French web. A directed edge connects page U to page V if there exists a hyperlink on page ​ U pointing to page ​ V . From the original subgraph, edges have been deleted at random​ . Given a set of candidate edges, our job was to predict which ones appeared in the original subgraph.</description>
     </item>
     
     <item>
       <title>Position Based dynamics 🤾‍♂️</title>
-      <link>https://kanvaly.io/projects/position-based-dynamics/</link>
+      <link>https://fkanvaly.github.io/projects/position-based-dynamics/</link>
       <pubDate>Sun, 31 May 2020 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/position-based-dynamics/</guid>
+      <guid>https://fkanvaly.github.io/projects/position-based-dynamics/</guid>
       <description>One approach for the simulation of dynamic systems in computer graphics is force-based. Internal and external forces are accumulated from which accelerations are computed based on Newton’s second law of motion. A time integration method is then used to update the velocities and finally the positions of the object. A few simulation methods (most rigid body simulators) use impulse-based dynamics and directly manipulate velocities. The paper I studied present an approach that omits the velocity layer as well and immediately works on the positions.</description>
     </item>
     
     <item>
       <title>Object Tracking</title>
-      <link>https://kanvaly.io/projects/object-tracking/</link>
+      <link>https://fkanvaly.github.io/projects/object-tracking/</link>
       <pubDate>Tue, 31 Dec 2019 23:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/object-tracking/</guid>
+      <guid>https://fkanvaly.github.io/projects/object-tracking/</guid>
       <description>Our goal was to firstly build a multiple object tracker by different methods of detection and tracking. Then choose an application domain. We chose to work on surveillance and security. The user can segment the region of interest in a video scene and any new object motion, position, and time spend there. Then after a certain amount of time, we start identification (if it is a human or a car) in an asynchronous way and launch an alarm given the result of identification.</description>
     </item>
     
     <item>
       <title>Sketch-based shape retrieval</title>
-      <link>https://kanvaly.io/projects/sketch-based-shape-retrieval/</link>
+      <link>https://fkanvaly.github.io/projects/sketch-based-shape-retrieval/</link>
       <pubDate>Sat, 30 Nov 2019 23:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/sketch-based-shape-retrieval/</guid>
+      <guid>https://fkanvaly.github.io/projects/sketch-based-shape-retrieval/</guid>
       <description>I choose to work on the problem of sketch-based retrieval for this semester, where the goal is to find relevant 3D models in a large collection. The input is a rough 2D sketch, rather than a complete 3D model. This problem is challenging and will allow me to use very well-developed techniques from image analysis. My goal will be to read and implement a recent paper, Sketch-Based Shape Retrieval, and test it on any dataset, such as the one described here.</description>
     </item>
     
     <item>
       <title>Intership - RGB to Infrared translation using GAN</title>
-      <link>https://kanvaly.io/projects/intership-rgb-to-infrared-translation-using-gan/</link>
+      <link>https://fkanvaly.github.io/projects/intership-rgb-to-infrared-translation-using-gan/</link>
       <pubDate>Fri, 31 May 2019 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/intership-rgb-to-infrared-translation-using-gan/</guid>
+      <guid>https://fkanvaly.github.io/projects/intership-rgb-to-infrared-translation-using-gan/</guid>
       <description>For tasks such as face recognition, facial landmarks detection, or gaze estimation state-of-the-art is often achieved using deep neural networks. One major drawback of this technology is that it requires a huge amount of training data. Fortunately, there are huge datasets publicly available for RGB images so when your application is based on RGB images there is no difficulty in gathering data. However, for the application of those networks on infrared (IR) imagery, there are often not enough annotated data available (if not none).</description>
     </item>
     
     <item>
       <title>Mark and Recapture 🦒</title>
-      <link>https://kanvaly.io/posts/capture-recapture/</link>
+      <link>https://fkanvaly.github.io/posts/capture-recapture/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/capture-recapture/</guid>
+      <guid>https://fkanvaly.github.io/posts/capture-recapture/</guid>
       <description>Bayesian Belief Update</description>
     </item>
     
     <item>
       <title>Flying Fish</title>
-      <link>https://kanvaly.io/projects/flying-fish/</link>
+      <link>https://fkanvaly.github.io/projects/flying-fish/</link>
       <pubDate>Sat, 31 Aug 2019 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/flying-fish/</guid>
+      <guid>https://fkanvaly.github.io/projects/flying-fish/</guid>
       <description>Our project is part of an initiative jointly initiated by ENSTA Bretagne and EDF concerning the dam on Lake Guerlédan, which aims to check the state of the evacuation grids set up by EDF to evacuate water from the cooling circuits of nuclear power plants into the nearby river.
 The drone we want to design and build will have to be able not only to fly but also to immerse itself to evolve in an aquatic environment, to access dangerous areas for divers.</description>
     </item>
     
     <item>
       <title>ipdb - debug your python code easily</title>
-      <link>https://kanvaly.io/posts/ipdb-debug-your-python-code-easily/</link>
+      <link>https://fkanvaly.github.io/posts/ipdb-debug-your-python-code-easily/</link>
       <pubDate>Wed, 07 Apr 2021 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/ipdb-debug-your-python-code-easily/</guid>
+      <guid>https://fkanvaly.github.io/posts/ipdb-debug-your-python-code-easily/</guid>
       <description>A debugger is tools that helps you to solve problems that are not understood in your scripts.
 It allows you to execute a program step by step, to study the execution of the code in real-time and to see the value of the variables at a precise place.
 You can debug your script as you wish; often a print is enough but in more complex cases you can use more advanced tool such as ipdb which is a combination of ipython and pdb</description>
@@ -123,37 +123,37 @@ You can debug your script as you wish; often a print is enough but in more compl
     
     <item>
       <title>3D Sahara desert 🏜️</title>
-      <link>https://kanvaly.io/projects/3d-sahara-desert/</link>
+      <link>https://fkanvaly.github.io/projects/3d-sahara-desert/</link>
       <pubDate>Wed, 03 Apr 2019 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/3d-sahara-desert/</guid>
+      <guid>https://fkanvaly.github.io/projects/3d-sahara-desert/</guid>
       <description>Our Project consists of modeling the landscape of an oasis on the banks of the Nile. The landscape represents a desert in the vicinity of a large river and has several static and animated elements that will be detailed later. The project consists of two main stages: first, we modeled the desert, which gave us a good starting point. Then, we added more and more complex extensions based on some models seen in class.</description>
     </item>
     
     <item>
       <title>Smart home control</title>
-      <link>https://kanvaly.io/projects/smart-home-control/</link>
+      <link>https://fkanvaly.github.io/projects/smart-home-control/</link>
       <pubDate>Mon, 31 Dec 2018 23:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/projects/smart-home-control/</guid>
+      <guid>https://fkanvaly.github.io/projects/smart-home-control/</guid>
       <description>As part of the mini-project of my Modal IoT I decided to transform my room into a smart one. This way, I will be able to control the state of the light, open my door or generate LED animations with my voice, my phone, or by voice command. So I made different objects that allowed me to make this possible.</description>
     </item>
     
     <item>
       <title>Normalized Compression Distance</title>
-      <link>https://kanvaly.io/posts/protein/</link>
+      <link>https://fkanvaly.github.io/posts/protein/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/protein/</guid>
+      <guid>https://fkanvaly.github.io/posts/protein/</guid>
       <description>You won&amp;#39;t believe it  ! Protein classification as simple as zipping file</description>
     </item>
     
     <item>
       <title>VoxelMorph: A Learning Framework for Deformable Medical Image Registration</title>
-      <link>https://kanvaly.io/research/papers/to_do_or_not_to_do/</link>
+      <link>https://fkanvaly.github.io/research/papers/to_do_or_not_to_do/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/research/papers/to_do_or_not_to_do/</guid>
+      <guid>https://fkanvaly.github.io/research/papers/to_do_or_not_to_do/</guid>
       <description>📝 Paper: https://arxiv.org/pdf/1809.05231.pdf
 🎯 What? Pairwise medical image registration. Image registration, also known as image fusion or image matching, is the process of aligning two or more images based on image appearances. Medical Image Registration seeks to find an optimal spatial transformation that best aligns the underlying anatomical structures. in other words, is the process of finding is the process of finding optimal transformation that puts different images optimal transformation that puts different images into spatial correspondence.</description>
     </item>
@@ -161,30 +161,30 @@ You can debug your script as you wish; often a print is enough but in more compl
     
     <item>
       <title>Connector</title>
-      <link>https://kanvaly.io/connector/</link>
+      <link>https://fkanvaly.github.io/connector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/connector/</guid>
+      <guid>https://fkanvaly.github.io/connector/</guid>
       <description>This page is dedicated to resources and blogs that I find interesting.
-Blog  Vincent D. Warmerdam - koaning Andrej Karpathy (Sr. Director of AI at Tesla) calmcode  AI  Twitter AI tweets Machine Learning subreddit  Design  Dribbble  </description>
+Blog Vincent D. Warmerdam - koaning Andrej Karpathy (Sr. Director of AI at Tesla) calmcode AI Twitter AI tweets Machine Learning subreddit Design Dribbble </description>
     </item>
     
     <item>
       <title>Connector</title>
-      <link>https://kanvaly.io/publication/</link>
+      <link>https://fkanvaly.github.io/publication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/publication/</guid>
-      <description>2021  K. Fadiga, E. Houzé, A. Diaconescu, and J.-L Dessalles, To do or not to do: Finding causal relations in smart homes. - Under Review at IEEE International Conference on Autonomic Computing and Self-Organizing Systems - ACSOS 2021. 🔗: https://arxiv.org/pdf/2105.10058.pdf  </description>
+      <guid>https://fkanvaly.github.io/publication/</guid>
+      <description> 2021 K. Fadiga, E. Houzé, A. Diaconescu, and J.-L Dessalles, To do or not to do: Finding causal relations in smart homes. - Under Review at IEEE International Conference on Autonomic Computing and Self-Organizing Systems - ACSOS 2021. 🔗: https://arxiv.org/pdf/2105.10058.pdf </description>
     </item>
     
     <item>
       <title>paper</title>
-      <link>https://kanvaly.io/papers/</link>
+      <link>https://fkanvaly.github.io/papers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/papers/</guid>
-      <description>Papers Review  </description>
+      <guid>https://fkanvaly.github.io/papers/</guid>
+      <description>Papers Review </description>
     </item>
     
     

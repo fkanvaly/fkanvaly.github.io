@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on kanvaly.🤖</title>
-    <link>https://kanvaly.io/posts/</link>
+    <link>https://fkanvaly.github.io/posts/</link>
     <description>Recent content in Posts on kanvaly.🤖</description>
     <image>
-      <url>https://kanvaly.io/cover.webp</url>
-      <link>https://kanvaly.io/cover.webp</link>
+      <url>https://fkanvaly.github.io/cover.webp</url>
+      <link>https://fkanvaly.github.io/cover.webp</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 07 Apr 2021 22:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Apr 2021 22:00:00 +0000</lastBuildDate><atom:link href="https://fkanvaly.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decipher messages 🔐</title>
-      <link>https://kanvaly.io/posts/decryptage/</link>
+      <link>https://fkanvaly.github.io/posts/decryptage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/decryptage/</guid>
+      <guid>https://fkanvaly.github.io/posts/decryptage/</guid>
       <description>how to decrypt any secret code</description>
     </item>
     
     <item>
       <title>Sensor placement 🎛️</title>
-      <link>https://kanvaly.io/posts/sensor-placement/</link>
+      <link>https://fkanvaly.github.io/posts/sensor-placement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/sensor-placement/</guid>
+      <guid>https://fkanvaly.github.io/posts/sensor-placement/</guid>
       <description>Stochastic Optimization</description>
     </item>
     
     <item>
       <title>Mark and Recapture 🦒</title>
-      <link>https://kanvaly.io/posts/capture-recapture/</link>
+      <link>https://fkanvaly.github.io/posts/capture-recapture/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/capture-recapture/</guid>
+      <guid>https://fkanvaly.github.io/posts/capture-recapture/</guid>
       <description>Bayesian Belief Update</description>
     </item>
     
     <item>
       <title>ipdb - debug your python code easily</title>
-      <link>https://kanvaly.io/posts/ipdb-debug-your-python-code-easily/</link>
+      <link>https://fkanvaly.github.io/posts/ipdb-debug-your-python-code-easily/</link>
       <pubDate>Wed, 07 Apr 2021 22:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/ipdb-debug-your-python-code-easily/</guid>
+      <guid>https://fkanvaly.github.io/posts/ipdb-debug-your-python-code-easily/</guid>
       <description>A debugger is tools that helps you to solve problems that are not understood in your scripts.
 It allows you to execute a program step by step, to study the execution of the code in real-time and to see the value of the variables at a precise place.
 You can debug your script as you wish; often a print is enough but in more complex cases you can use more advanced tool such as ipdb which is a combination of ipython and pdb</description>
@@ -50,10 +50,10 @@ You can debug your script as you wish; often a print is enough but in more compl
     
     <item>
       <title>Normalized Compression Distance</title>
-      <link>https://kanvaly.io/posts/protein/</link>
+      <link>https://fkanvaly.github.io/posts/protein/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/posts/protein/</guid>
+      <guid>https://fkanvaly.github.io/posts/protein/</guid>
       <description>You won&amp;#39;t believe it  ! Protein classification as simple as zipping file</description>
     </item>
     

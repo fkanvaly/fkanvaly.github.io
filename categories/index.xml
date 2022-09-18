@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on kanvaly.🤖</title>
-    <link>https://kanvaly.io/categories/</link>
+    <link>https://fkanvaly.github.io/categories/</link>
     <description>Recent content in Categories on kanvaly.🤖</description>
     <image>
-      <url>https://kanvaly.io/cover.webp</url>
-      <link>https://kanvaly.io/cover.webp</link>
+      <url>https://fkanvaly.github.io/cover.webp</url>
+      <link>https://fkanvaly.github.io/cover.webp</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 30 Nov 2019 23:00:00 +0000</lastBuildDate><atom:link href="https://kanvaly.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Nov 2019 23:00:00 +0000</lastBuildDate><atom:link href="https://fkanvaly.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Computer graphics</title>
-      <link>https://kanvaly.io/categories/computer-graphics/</link>
+      <link>https://fkanvaly.github.io/categories/computer-graphics/</link>
       <pubDate>Sat, 30 Nov 2019 23:00:00 +0000</pubDate>
       
-      <guid>https://kanvaly.io/categories/computer-graphics/</guid>
+      <guid>https://fkanvaly.github.io/categories/computer-graphics/</guid>
       <description></description>
     </item>
     
